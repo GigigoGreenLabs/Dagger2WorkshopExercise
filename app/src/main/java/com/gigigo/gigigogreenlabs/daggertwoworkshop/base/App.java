@@ -18,6 +18,9 @@
 package com.gigigo.gigigogreenlabs.daggertwoworkshop.base;
 
 import android.app.Application;
+import android.util.Log;
+import com.gigigo.gigigogreenlabs.daggertwoworkshop.test.A;
+import javax.inject.Inject;
 
 /**
  * Created by Gigigo Green Labs
@@ -25,12 +28,15 @@ import android.app.Application;
  */
 public class App extends Application{
 
+  @Inject A a;
   private AppComponent appComponent;
 
   @Override public void onCreate() {
     super.onCreate();
 
     initDI();
+
+    Log.i("TAG", "TEXTO APP --> " + a.getText());
 
   }
 

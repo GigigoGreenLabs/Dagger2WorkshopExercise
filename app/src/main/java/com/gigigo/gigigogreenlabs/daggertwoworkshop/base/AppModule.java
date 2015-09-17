@@ -17,7 +17,10 @@
 
 package com.gigigo.gigigogreenlabs.daggertwoworkshop.base;
 
+import com.gigigo.gigigogreenlabs.daggertwoworkshop.test.A;
 import dagger.Module;
+import dagger.Provides;
+import javax.inject.Singleton;
 
 /**
  * Created by Sergio Martinez Rodriguez
@@ -25,5 +28,9 @@ import dagger.Module;
  */
 @Module()
 public class AppModule {
+
+  @Singleton @Provides A provideA(){
+    return new A();
+  }
 
 }

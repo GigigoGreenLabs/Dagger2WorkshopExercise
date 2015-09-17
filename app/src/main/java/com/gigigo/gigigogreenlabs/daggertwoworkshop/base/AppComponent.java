@@ -17,6 +17,9 @@
 
 package com.gigigo.gigigogreenlabs.daggertwoworkshop.base;
 
+import com.gigigo.gigigogreenlabs.daggertwoworkshop.main.SecondActivityComponent;
+import com.gigigo.gigigogreenlabs.daggertwoworkshop.main.SecondActivityModule;
+import com.gigigo.gigigogreenlabs.daggertwoworkshop.test.A;
 import dagger.Component;
 import javax.inject.Singleton;
 
@@ -27,4 +30,6 @@ import javax.inject.Singleton;
 @Singleton @Component(modules = AppModule.class)
 public interface AppComponent {
   void inject(App app);
+  //A provideA();
+  SecondActivityComponent plus(SecondActivityModule secondActivityModule);
 }
